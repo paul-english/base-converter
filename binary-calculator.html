@@ -1,0 +1,51 @@
+<head>
+  <title>binary-calculator</title>
+</head>
+
+<body>
+  <div class="container">
+      {{> calculator}}
+  </div>
+</body>
+
+<template name="calculator">
+
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label">Binary</label>
+      <div class="controls">
+	<input id="one_twenty_eight" type="checkbox" {{#if one_hundred_twenty_eight_bit}}checked="checked"{{/if}} />
+	<input id="sixty_four" type="checkbox" {{#if sixty_four_bit}}checked="checked"{{/if}} />
+	<input id="thirty_two" type="checkbox" {{#if thirty_two_bit}}checked="checked"{{/if}} />
+	<input id="sixteen" type="checkbox" {{#if sixteen_bit}}checked="checked"{{/if}} />
+	<input id="eight" type="checkbox" {{#if eight_bit}}checked="checked"{{/if}} />
+	<input id="four" type="checkbox" {{#if four_bit}}checked="checked"{{/if}} />
+	<input id="two" type="checkbox" {{#if two_bit}}checked="checked"{{/if}} />
+	<input id="one" type="checkbox" {{#if one_bit}}checked="checked"{{/if}} />
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+	<input type="text" value="{{binary_number}}" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Octal</label>
+      <div class="controls">
+	<input type="text" value="{{octal_number}}" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Decimal</label>
+      <div class="controls">
+	<input type="number" id="decimal" value="{{decimal_number}}" autofocus="autofocus" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Hex</label>
+      <div class="controls">
+	<input type="text" value="{{hex_number}}" />
+      </div>
+    </div>
+  </form>
+</template>
