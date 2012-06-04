@@ -15,6 +15,10 @@
     <div class="control-group">
       <label class="control-label">Binary</label>
       <div class="controls">
+	<input id="two_forty_eight" type="checkbox" {{#if two_forty_eight_bit}}checked="checked"{{/if}} />
+	<input id="ten_twenty_four" type="checkbox" {{#if ten_twenty_four_bit}}checked="checked"{{/if}} />
+	<input id="five_twelve" type="checkbox" {{#if five_twelve_bit}}checked="checked"{{/if}} />
+	<input id="two_fifty_six" type="checkbox" {{#if two_fifty_six_bit}}checked="checked"{{/if}} />
 	<input id="one_twenty_eight" type="checkbox" {{#if one_hundred_twenty_eight_bit}}checked="checked"{{/if}} />
 	<input id="sixty_four" type="checkbox" {{#if sixty_four_bit}}checked="checked"{{/if}} />
 	<input id="thirty_two" type="checkbox" {{#if thirty_two_bit}}checked="checked"{{/if}} />
@@ -27,7 +31,7 @@
     </div>
     <div class="control-group">
       <div class="controls">
-	<input type="text" value="{{binary_number}}" />
+	<input type="text" id="binary" value="{{binary_number}}" />
       </div>
     </div>
     <div class="control-group">
@@ -45,7 +49,7 @@
     <div class="control-group">
       <label class="control-label">Hex</label>
       <div class="controls">
-	<input type="text" value="{{hex_number}}" />
+	<input type="text" id="hex" value="{{hex_number}}" />
       </div>
     </div>
   </form>
